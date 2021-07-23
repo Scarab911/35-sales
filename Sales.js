@@ -16,7 +16,7 @@ class Sales {
         for (const item of this.productsData) {
             count++
             price = item.price / 100;
-            console.log(`${count}. ${item.productName} bought for ${price.toFixed(2)} ${this.currency}!`)
+            console.log(`${count}. ${item.quantity} ${item.productName} bought for ${price.toFixed(2)} ${this.currency}!`)
         }
     }
     productsForSaleList() {
@@ -25,7 +25,7 @@ class Sales {
         for (const item of this.productsData) {
             count++
             sellPrice = item.sellPrice / 100;
-            console.log(`${count}. ${item.productName} available for ${sellPrice.toFixed(2)} ${this.currency}!`)
+            console.log(`${count}. ${item.quantity} ${item.productName} available for ${sellPrice.toFixed(2)} ${this.currency}!`)
         }
     }
     profitFromSale(profitInPercent) {
